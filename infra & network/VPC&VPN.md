@@ -2,9 +2,8 @@
 
 ### **************Amazon Virtual Private Cloud**************
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ec8cc26a-1fc0-4925-b27a-006f7b3ca73c/Untitled.png)
+![image](https://user-images.githubusercontent.com/77326600/228996877-24d7a7cf-3ab5-4fa8-8f36-3c2b73bacbaa.png)
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/870cf4aa-bc17-4abe-b99f-b2eaf835babd/Untitled.png)
 
 VPN ⇒ 가상 사설망
 
@@ -18,13 +17,17 @@ ex) 회사 내에서만 접속 가능한 서버를 VPN을 이용해서 집에서
 
 **VPC**
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/da9e8a7c-3c40-4aca-b23a-be4b932b5249/Untitled.png)
+![image](https://user-images.githubusercontent.com/77326600/228996905-49a947af-4213-4370-86ec-0c761616eacf.png)
+
+
 
 VPC가 없다면 EC2 인스턴스들이 서로 거미줄처럼 연결되고 인터넷과 연결됨
 
 ⇒ 시스템 복잡도 끌어올림
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/5bd57e24-694b-4f73-968b-ea0e7d6c975d/Untitled.png)
+![image](https://user-images.githubusercontent.com/77326600/228996924-c13a727d-353c-46c8-8722-e50002a727a8.png)
+
+
 
 VPC를 적용하면 위 그림처럼 VPC별로 네트워크를 구성할 수 있음.
 
