@@ -9,7 +9,7 @@ ALB를 통해서 On-Premise 서버, AWS EC2 에 접근할 수 있습니다.
 데이터를 이관하는 동안 On-Premise 서버를 통해 서비스를 유지하며 AWS EC2에 이관하는 방식의 구조입다.
 또는 하이브리드 클라우드 방식을 택하여 기존 On-Premise 서버를 유지하며 클라우드 서비스를 이용하는 방식으로 운영하는 것도 하나의 방법이 될 것입니다.
 
-![image](https://user-images.githubusercontent.com/77326600/230462244-99ca6d11-e211-4380-948d-5d9fe2ae4ed5.png
+![image](https://user-images.githubusercontent.com/77326600/230462244-99ca6d11-e211-4380-948d-5d9fe2ae4ed5.png)
 위처럼 URL을 통해서 대상 그룹에 접근할 수 있는데, 대규모 프로모션 기간에는 행사 상품의 URL을 따로 설정하여 대상 그룹을 만드는 방식도 고려할 수 있을 것 같습니다.
 (그렇게 되면 결제 단계에서 결국 합쳐지게 될텐데, 이때는 회원 ID를 쿼리로 하여 또 대상 그룹을 유연하게 묶을 수 있을 것 같습니다.)
 
