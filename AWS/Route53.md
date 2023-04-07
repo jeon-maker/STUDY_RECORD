@@ -1,25 +1,27 @@
 # Route 53
 
-고가용성, 확장성을 갖춘 DNS
+### Route 53
 
-고객이 DNS 레코드를 제어할 수 있음 → DNS에 대한 완전한 제어권을 갖고 있음
+- AWS의 DNS 역할을 해준다. User에게 Domain 요청을 받아서 알맞은 IP 주소로 응답해 알려준다.
+- Route 53을 통해 도메인을 구매할 수 있다.
+- 도메인을 구매하면 구매한 도메인 이름에 대한 호스팅 존을 볼 수 있다.
+    - 레코드가 두개 생긴다.
+    - NS 레코드, SOA 레코드
+    
+![image](https://user-images.githubusercontent.com/77326600/230551188-c3422404-4a38-4279-917e-7c8ecc850de2.png)
 
-Client → Route 53 
+- 레코드중에서 응답을 준다
+- Route 53에서 레코드를 생성할 수도 있다
+    - 레코드를 생성할 때  Value에 IP를 넣을 수 있는데 존재하지 않으면 응답하지 않는다
+    
+    AWS의 클라우드셸을 터미널로 쓸 수 있다 ! (아마 도커처럼 클라우드 상 터미널을 주는 것일듯)
+    
+- 인스턴스를 만들고 Route 53에 연결할 수 있다.
+    - 인스턴스를 만들때 User data 에 스크립트 셸을 넣어 초기 환경을 세팅할 수 있다.
+    
+![image](https://user-images.githubusercontent.com/77326600/230551240-2103a2a5-3d53-4439-92a5-96ce019e12ed.png)
 
-- 도메인에 해당하는 쿼리를 보냄
 
-Route 53 →Client 
-
-- 도메인에 해당하는 IP를 알려줌
-
-Client가 요청을 받고 바로 인스턴스에 접근함 !
-
-Route 53은 도메인 이름 레지스트라로, 받은 쿼리를 도메인 이름으로 등록 
-
-### Record Types
-
-- A - maps a hostname to IPv4
-- AAAA - maps a hostname to IPv6
-- CNAME - maps a hostname to another hostname
-    - 대상 호스트 이름 : A / AAAA 레코드
-- NS - Name Servers for the Hosted Zone
+- 인스턴스를 여러 개 만들고 로드밸런서를 붙인다.
+    - ALB를 만들 때 서브넷, 보안그룹을 선택할 수 있다
+    - 리스너-라우팅에서 Port 설정 후 forward to 를 설정할 수 있다 (대상 그룹)
