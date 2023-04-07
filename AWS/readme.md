@@ -89,10 +89,11 @@ CloudFront = CDN (Content Delivery Network)
 # CloudFront - S3
 
 S3 버킷 만들기
+![image](https://user-images.githubusercontent.com/77326600/230584340-41f1de14-a7e4-4529-9594-132a7c06fea5.png)
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ac04807f-f1c4-4840-a672-29081d18efd7/Untitled.png)
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/0d9429e1-04d7-4619-95bf-1698eef60a8a/Untitled.png)
+![image](https://user-images.githubusercontent.com/77326600/230584384-317002eb-4240-4a41-a518-798c4c8c842e.png)
+
 
 버킷을 만들고 이미지와 html 파일을 업로드 합니다.
 
