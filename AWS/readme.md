@@ -14,6 +14,12 @@ ALB를 통해서 On-Premise 서버, AWS EC2 에 접근할 수 있습니다.
 (그렇게 되면 결제 단계에서 결국 합쳐지게 될텐데, 이때는 회원 ID를 쿼리로 하여 또 대상 그룹을 유연하게 묶을 수 있을 것 같습니다.)
 
 
+## 2. CloudFront - S3 Bucket 연결 및 IAM User 
+![image](https://user-images.githubusercontent.com/77326600/230583790-8cb18850-d9dd-4a03-ae27-770e76d9c3a5.png)
+
+CloudFron는 전세계 엣지 로케이션을 활용합니다. S3 Bucket과 연결되어 있으며 이 버킷은 CloudFront만 접근 가능합니다.
+캐싱을 통해서 정적 컨텐츠의 빠른 제공을 가능하게 합니다. 
+
 # Funtion Study & Test
 
 ### ALB Test
@@ -42,3 +48,88 @@ ALB를 통해서 On-Premise 서버, AWS EC2 에 접근할 수 있습니다.
 인스턴스 중 에러가 나서 down된 것이 생기면 그 인스턴스를 제외하고 다른 인스턴스들에 접근을 합니다.
 
 에러에 유연하게 대응할 수 있는 장점을 확인할 수 있습니다.
+
+
+### CloudFront - S3 Bucket
+
+# Cloud Front
+
+CloudFront = CDN (Content Delivery Network) 
+
+웹사이트의 컨텐츠를 서로 다른 엣지 로케이션에 미리 **********캐싱********** 하여 읽기 성능을 높임
+
+전세계 216개 엣지 로케이션 ( AWS가 지속 추가중)
+
+컨텐츠가 분산되어 있기 때문에 DDoS 예방 가능
+
+(DDoS - 모든 서버가 동시에 공격 받음)
+
+엣지 로케이션의 캐싱 방식으로 !
+
+( 초기 요청은 원본에서 가져오지만, 재요청시에는 캐싱해놓은 것으로 응답함)
+
+**원본 - S3 버킷**
+
+**버킷에는 클라우드프론트만 접근!  !**
+
+**CDN- 전세계 엣지 로케이션 사용.**
+
+**전세계를 대상으로 한 정적 컨텐츠 제공!!**
+
+**캐싱 TTL이 존재함 (대부분 하루)**
+
+교체 리전 복제  
+
+복제를 원하는 각 리전에 이 설정이 되어 있어야 함.
+
+파일은 실시간으로 갱신됨. 캐싱 안되고, 읽기 전용
+
+동적 컨텐츠를 낮은 지연 시간으로 제공하고자 할 때
+
+# CloudFront - S3
+
+S3 버킷 만들기
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ac04807f-f1c4-4840-a672-29081d18efd7/Untitled.png)
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/0d9429e1-04d7-4619-95bf-1698eef60a8a/Untitled.png)
+
+버킷을 만들고 이미지와 html 파일을 업로드 합니다.
+
+html 파일을 url로 열었을 때 !
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/54e17caf-3de4-4aef-a200-e2873c15d117/Untitled.png)
+
+아직 퍼블릭 설정이 되어있지 않기 때문에 접근이 안됨
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/29b364f9-8524-4050-968a-834804e8274b/Untitled.png)
+
+open으로 열었을 때, 이미지가 퍼블릭 되어있지 않아서 이미지가 안보임
+
+CloudFront를 사용하면 파일을 퍼블릭 설정하지 않고도 접근할 수 있음
+
+- CloudFront 만들고 버킷에 access 하기
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/88edf278-016d-411d-a2b0-22204b7294d8/Untitled.png)
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/410bf2c1-428f-4857-b1dd-327d859132a7/Untitled.png)
+
+CloudFront에 접근할 때 기본값으로 버킷 안에 있는 index.html을 띄워줍니다.
+
+CloudFront를 생성하고, 버킷 정책을 복사해서 버킷 설정에 그 정책을 붙여넣으면 CloudFront이 성공적으로 배포중이라는 것을 알려주고 그 Domain으로 이동하면
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/204dd7b4-fdf4-4978-8269-be394a9d1251/Untitled.png)
+
+이제는 이미지가 보여짐을 알 수 있다!
+
+최초 접근 뒤, 동일 도메인으로 접근하면 CloudFront에서 캐시로 응답한다!
+
+### CloudFront의 원본 엑세스를 확인해보자!
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/2fce1825-5ccd-4790-85d3-5d6f3a1cc686/Untitled.png)
+
+버킷을 원본으로 엑세스함을 알 수 있고, 배포되고 있음을 확인할 수 있다!
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/a588ccee-0729-417b-b3b9-0158178b3fc8/Untitled.png)
+
+배포 ID = CloudFront ID
