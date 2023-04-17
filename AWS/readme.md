@@ -1,8 +1,7 @@
 # Architecture 
 
-## 1. Down Time이 없는 인프라를 위해서 다음과 같이 아키텍처를 구성해봤습니다.
-### 이관하는 동안의 아키텍처
-![image](https://user-images.githubusercontent.com/77326600/230461480-266a91b0-dc5f-4824-9937-e2a2ece09847.png)
+![image](https://user-images.githubusercontent.com/77326600/232410956-0d82c7a6-15a2-4749-aab5-ba0049b4a9fe.png)
+
 
 핵심 포인트는 ALB 입니다.
 ALB를 통해서 On-Premise 서버, AWS EC2 에 접근할 수 있습니다.
@@ -99,11 +98,11 @@ S3 버킷 만들기
 
 html 파일을 url로 열었을 때 !
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/54e17caf-3de4-4aef-a200-e2873c15d117/Untitled.png)
+![image](https://user-images.githubusercontent.com/77326600/232411099-852a0672-35d2-434b-9d60-922d524d5b42.png)
 
 아직 퍼블릭 설정이 되어있지 않기 때문에 접근이 안됨
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/29b364f9-8524-4050-968a-834804e8274b/Untitled.png)
+![image](https://user-images.githubusercontent.com/77326600/232411165-f7268c1e-be5a-4010-b8f7-254e5a73a9f8.png)
 
 open으로 열었을 때, 이미지가 퍼블릭 되어있지 않아서 이미지가 안보임
 
@@ -111,15 +110,15 @@ CloudFront를 사용하면 파일을 퍼블릭 설정하지 않고도 접근할 
 
 - CloudFront 만들고 버킷에 access 하기
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/88edf278-016d-411d-a2b0-22204b7294d8/Untitled.png)
+![image](https://user-images.githubusercontent.com/77326600/232411230-62954c33-e553-4d18-b705-e15e27976466.png)
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/410bf2c1-428f-4857-b1dd-327d859132a7/Untitled.png)
+![image](https://user-images.githubusercontent.com/77326600/232411263-d1eda371-f93a-49b2-b8ee-04c402fd1060.png)
 
 CloudFront에 접근할 때 기본값으로 버킷 안에 있는 index.html을 띄워줍니다.
 
 CloudFront를 생성하고, 버킷 정책을 복사해서 버킷 설정에 그 정책을 붙여넣으면 CloudFront이 성공적으로 배포중이라는 것을 알려주고 그 Domain으로 이동하면
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/204dd7b4-fdf4-4978-8269-be394a9d1251/Untitled.png)
+![image](https://user-images.githubusercontent.com/77326600/232411345-7acd3303-5ca0-4fb7-bf7c-c1aa614dac73.png)
 
 이제는 이미지가 보여짐을 알 수 있다!
 
@@ -127,10 +126,11 @@ CloudFront를 생성하고, 버킷 정책을 복사해서 버킷 설정에 그 �
 
 ### CloudFront의 원본 엑세스를 확인해보자!
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/2fce1825-5ccd-4790-85d3-5d6f3a1cc686/Untitled.png)
-
+![image](https://user-images.githubusercontent.com/77326600/232411453-fae6d70b-5b35-4899-9e57-304dc69d4c6d.png)
 버킷을 원본으로 엑세스함을 알 수 있고, 배포되고 있음을 확인할 수 있다!
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/a588ccee-0729-417b-b3b9-0158178b3fc8/Untitled.png)
-
+![image](https://user-images.githubusercontent.com/77326600/232411487-835b646e-5017-4480-bb36-439ed184da4c.png)
 배포 ID = CloudFront ID
+
+
+
