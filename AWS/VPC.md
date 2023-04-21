@@ -6,9 +6,10 @@ CIDR은 두가지 구성요소가 있다
 > 
 
 > Subnet Mask
-> 
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/298d2cad-d223-4b0a-b982-552b5c54ff22/Untitled.png)
+![image](https://user-images.githubusercontent.com/77326600/233700691-b08af078-e0db-4629-9f23-1ce7b4f6fe4c.png)
+
+
 
 /X 일때 
 
@@ -41,6 +42,7 @@ VPC 생성!
 
 
 IPv4 CIDR :10.0.0.0/16
+10.0.0.0/16의 IP 주소 범위는 10.0.0.0부터 10.255.255.255까지이며, 이는 총 16,777,216개의 IP 주소를 가집니다.
 
 ![image](https://user-images.githubusercontent.com/77326600/230722046-eb7b5e3a-3a2d-462d-bdf7-6ce111a98412.png)
 
@@ -51,9 +53,15 @@ IPv4 CIDR :10.0.0.0/16
 
 퍼블릭 서브넷 두 개 생성
 
-![image](https://user-images.githubusercontent.com/77326600/230722077-492a9fc4-3258-4057-9fa3-30f19dcd2d1a.png)
+![image](https://user-images.githubusercontent.com/77326600/233700959-896271f6-c017-4a56-963f-57e43a949846.png)
+
+서브넷 주소를 다음과 같이 10.0.0.0/24 그리고 10.0.1.0/24로 설정하는 이유는 변경 가능한 옥텟 범위를 고려했기 때문이다.
 
 
 프라이빗 서브넷 두 개 생성
 
-![image](https://user-images.githubusercontent.com/77326600/230722092-02f12619-4f80-473e-88a3-3258d5209c42.png)
+![image](https://user-images.githubusercontent.com/77326600/233700994-bc29991e-cf42-4942-b45e-a9ae0e3c9a66.png)
+
+두개를 생성할때 publicSubnet 보다 더 넓은 범위를 갖도록 네트워크 주소의 비트를 설정한다.
+
+10.0.16.0/20 은 10.0.16.0~10.0.31.255 까지이다!
