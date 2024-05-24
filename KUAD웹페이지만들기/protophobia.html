@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KUAD FASHION SHOW 2024 PROTOTYPE</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+            background: url('뒷배경2.png') no-repeat center center fixed;
+            background-size: cover;
+            color: black; /* 텍스트 색상 설정 */
+            font-size: 1.2em; /* 기본 글자 크기 */
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+        .nav-links {
+            display: flex;
+            justify-content: center;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            margin: 0 10px;
+            font-size: 1.4em; /* 네비게이션 링크 글자 크기 */
+            transition: color 0.3s;
+        }
+        .nav-links a:hover {
+            color: #ddd;
+        }
+        .logo {
+            width: 100px;
+        }
+        .banner-link {
+            color: black;
+        }
+        .content {
+            display: flex;
+            justify-content: center;
+            align-items: center; /* 세로로 중앙 정렬 */
+            height: calc(100vh - 80px); /* 헤더를 제외한 화면 높이 */
+            padding: 10px;
+            text-align: center;
+        }
+        .image-container {
+            width: 45%;
+            text-align: right; /* 오른쪽 정렬 */
+            margin-right: 20px; /* 텍스트와의 간격 */
+        }
+        .image-container img {
+            width: 50%; /* 이미지 너비 조정 */
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .text-container {
+            width: 45%;
+            padding: 20px;
+            text-align: left; /* 텍스트 왼쪽 정렬 */
+        }
+        .text-container h1 {
+            margin-top: 0;
+            font-size: 2em; /* 제목 글자 크기 */
+        }
+        .text-container p {
+            line-height: 1.6;
+        }
+        .keywords {
+            margin-top: 20px;
+            font-size: 1em; /* 키워드 글자 크기 */
+        }
+        .keywords span {
+            margin-right: 10px;
+        }
+        .video-container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            padding: 0px 0; /* 상하 여백 */
+        }
+        .video-container video {
+            width: 100%; /* 동영상 너비 줄이기 */
+            max-width: 1300px; /* 최대 너비 줄이기 */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .team-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+        .team-member {
+            width: 25%; /* 각 멤버의 너비를 줄여 한 행에 세 명 배치 */
+            margin: 10px;
+            text-align: center;
+        }
+        .team-member img {
+            width: 50%; /* 이미지 크기 줄이기 */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .role, .name {
+            margin-top: 10px;
+            font-weight: bold;
+            font-size: 0.9em; /* 역할과 이름의 글자 크기 줄이기 */
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="index.html" class="logo-link">
+            <img src="..\kuad 이미지.png" alt="KUAD Logo" class="logo">
+        </a>
+        <div class="nav-links">
+            <a href="..\PROJECTS.html" class="banner-link">PROJECTS</a>
+            <a href="..\..\LOOKBOOK\LOOKBOOK.html" class="banner-link">LOOKBOOK</a>
+            <a href="RUNWAY.html" class="banner-link">RUNWAY</a>
+            <a href="SHOW_INFO.html" class="banner-link">SHOW INFO</a>
+            <a href="BEHIND.html" class="banner-link">BEHIND</a>
+        </div>
+    </div>
+    <div class="content">
+        <div class="image-container">
+            <img src="protophobia_TEAMPOSTER.jpg" alt="Protophobia Image">
+        </div>
+        <div class="text-container">
+            <h1>protophobia</h1>
+            <p>
+                사람들에겐 내재된 '완벽을 좇는 세포'가 있다.<br>
+                이는 우리의 발전을 이끌었지만 동시에 맹목적으로 완벽만을 바라게 만들었다.<br>
+                이러한 상황 속 각자의 세포는 변이를 일으켜 새로운 질병으로 발현되었고<br>
+                다양한 형태의 질병으로 전가되었다. 이를 'Protophobia'로 명명하였다.<br><br>
+                우리 9명은 컬렉션을 통해 'Protophobia'가 발병한 사람들의 9가지 모습을 보이려 한다.<br>
+                [Tittle:Protophobia]는 각자의 시각으로 바라본 질병 'Protophobia'의 발현을 각자의 경험과 생각을 녹여 시각적인 형태로 표현하고자 한다.
+            </p>
+            <div class="keywords">
+                <span>#Cell</span>
+                <span>#Manifestation</span>
+                <span>#Disease</span>
+                <span>#Perfection</span>
+            </div>
+        </div>
+    </div>
+    <div class="video-container">
+        <video controls>
+            <source src="1 - [protophobia].mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <div class="team-container">
+        <div class="team-member">
+            <img src="./members/1.jpg" alt="Team Leader">
+            <div class="role">TEAM LEADER</div>
+            <div class="name">최준우</div>
+        </div>
+        <div class="team-member">
+            <img src="./members/2.jpg" alt="Sub Leader">
+            <div class="role">SUB LEADER</div>
+            <div class="name">곽도훈</div>
+        </div>
+        <div class="team-member">
+            <img src="./members/3.jpg" alt="Team Member">
+            <div class="role">TEAM MEMBER</div>
+            <div class="name">윤소혜</div>
+        </div>
+        <div class="team-member">
+            <img src="./members/4.jpg" alt="Team Member">
+            <div class="role">TEAM MEMBER</div>
+            <div class="name">정경모</div>
+        </div>
+        <div class="team-member">
+            <img src="./members/5.jpg" alt="Team Member">
+            <div class="role">TEAM MEMBER</div>
+            <div class="name">김민서</div>
+        </div>
+        <div class="team-member">
+            <img src="./members/6.jpg" alt="Team Member">
+            <div class="role">TEAM MEMBER</div>
+            <div class="name">김희영</div>
+        </div>
+        <div class="team-member">
+            <img src="./members/7.jpg" alt="Team Member">
+            <div class="role">TEAM MEMBER</div>
+            <div class="name">김지인</div>
+        </div>
+        <div class="team-member">
+            <img src="./members/8.jpg" alt="Team Member">
+            <div class="role">TEAM MEMBER</div>
+            <div class="name">이은지</div>
+        </div>
+        <div class="team-member">
+            <img src="./members/9.jpg" alt="Team Member">
+            <div class="role">TEAM MEMBER</div>
+            <div class="name">윤도희</div>
+        </div>
+    </div>
+</body>
+</html>

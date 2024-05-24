@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KUAD FASHION SHOW 2024 PROTOTYPE</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+            background: url('뒷배경.jpeg') no-repeat center center fixed;
+            background-size: cover;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+        .nav-links {
+            display: flex;
+            justify-content: center;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            margin: 0 10px;
+            font-size: 1.2em;
+            transition: color 0.3s;
+        }
+        .nav-links a:hover {
+            color: #ddd;
+        }
+        .logo {
+            width: 100px;
+        }
+        .banner-link {
+            color: black;
+        }
+        .slideshow-container {
+            max-width: 1000px;
+            position: relative;
+            margin: auto;
+        }
+        .mySlides {
+            display: none;
+        }
+        .fade {
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 1.5s;
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+        @-webkit-keyframes fade {
+            from {opacity: .4} 
+            to {opacity: 1}
+        }
+        @keyframes fade {
+            from {opacity: .4} 
+            to {opacity: 1}
+        }
+        .prev, .next {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 50%;
+            padding: 16px;
+            background-color: rgba(0, 0, 0, 0);
+            color: transparent;
+            cursor: pointer;
+            font-size: 36px;
+            border: none;
+            outline: none;
+        }
+        .prev:hover, .next:hover {
+            background-color: rgba(0, 0, 0, 0.1);
+            color: white;
+        }
+        .prev {
+            left: 0;
+            justify-content: flex-start;
+            text-align: left;
+            padding-left: 30px;
+        }
+        .next {
+            right: 0;
+            justify-content: flex-end;
+            text-align: right;
+            padding-right: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="index.html" class="logo-link">
+            <img src="kuad 이미지.png" alt="KUAD Logo" class="logo">
+        </a>
+        <div class="nav-links">
+            <a href="PROJECTS.html" class="banner-link">PROJECTS</a>
+            <a href="LOOKBOOK.html" class="banner-link">LOOKBOOK</a>
+            <a href="RUNWAY.html" class="banner-link">RUNWAY</a>
+            <a href="SHOW_INFO.html" class="banner-link">SHOW INFO</a>
+            <a href="BEHIND.html" class="banner-link">BEHIND</a>
+        </div>
+    </div>
+    
+    <!-- 슬라이드쇼 컨테이너 -->
+    <div class="slideshow-container">
+        <!-- JavaScript로 생성되는 슬라이드 -->
+        <script>
+            for (let i = 1; i <= 48; i++) {
+                document.write(`
+                    <div class="mySlides fade">
+                        <img src="protophobia${i}.jpg" style="width:100%">
+                    </div>
+                `);
+            }
+        </script>
+        
+        <!-- 이전/다음 버튼 -->
+        <button class="prev" onclick="plusSlides(-1)">&#10094;</button>
+        <button class="next" onclick="plusSlides(1)">&#10095;</button>
+    </div>
+
+    <!-- JavaScript 추가 -->
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[slideIndex-1].style.display = "block";
+        }
+    </script>
+</body>
+</html>

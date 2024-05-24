@@ -57,32 +57,32 @@
         }
         .book img {
             width: 100%;
-            max-width: 150px; /* Adjust the maximum width */
+            max-width: 250px; /* Adjust the maximum width */
             border-radius: 5px;
+            margin-bottom: 15px; /* Increase the space between image and text */
         }
         .book p {
-            margin-top: 10px;
             font-size: 18px; /* Increase font size */
             color: #333; /* Change font color */
             font-style: italic; /* Apply italic style */
             font-weight: bold; /* Apply bold style */
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
         }
         .banner-link {
             color: black;
         }
-        .logo-link {
-            text-decoration: none;
-            color: inherit;
+        .book a {
+            text-decoration: none; /* Remove underline from links */
         }
     </style>
 </head>
 <body>
     <div class="header">
-        <a href="index.html" class="logo-link">
-            <img src="kuad 이미지.png" alt="KUAD Logo" class="logo">
-        </a>
+        <a href="..\index.html" class="logo-link">
+        <img src="kuad 이미지.png" alt="KUAD Logo" class="logo">
         <div class="nav-links">
-            <a href="PROJECTS.html" class="banner-link">PROJECTS</a>
+            <a href="..\PROJECTS\PROJECTS.html" class="banner-link">PROJECTS</a>
             <a href="LOOKBOOK.html" class="banner-link">LOOKBOOK</a>
             <a href="RUNWAY.html" class="banner-link">RUNWAY</a>
             <a href="BEHIND.html" class="banner-link">BEHIND</a>
@@ -91,22 +91,41 @@
     <div class="container">
         <div class="book">
             <a href="book1.html">
-                <img src="팀포스터.jpg" alt="Book 1">
-                <p>Book 1 Title</p>
+                <img src=".\룩북 팀별 표지\프로토포비아-책표지.jpg" alt="Book 1">
+                <p>protophobia</p>
             </a>
         </div>
         <div class="book">
             <a href="book2.html">
-                <img src="팀포스터.jpg" alt="Book 2">
-                <p>Book 2 Title</p>
+                <img src=".\룩북 팀별 표지\옥-책표지.jpg" alt="Book 2">
+                <p>OAK_TEAMPOSTER</p>
             </a>
         </div>
         <div class="book">
-            <a href="book3.html">
-                <img src="D:\접근불가\팀포스터.jpg" alt="Book 2">
-                <p>D드라이브 Book 2 Title</p>
+            <a href="book1.html">
+                <img src=".\룩북 팀별 표지\아나크로니아-책표지.jpg" alt="Book 1">
+                <p>Anachronia</p>
             </a>
         </div>
+        <div class="book">
+            <a href="book1.html">
+                <img src=".\룩북 팀별 표지\버그리포트-책표지.jpg" alt="Book 1">
+                <p>BUG REPORT</p>
+            </a>
+        </div>
+        <div class="book">
+            <a href="book1.html">
+                <img src=".\룩북 팀별 표지\로프트-책표지.jpg" alt="Book 1">
+                <p>Loft-1.0</p>
+            </a>
+        </div>
+        <div class="book">
+            <a href="book1.html">
+                <img src=".\룩북 팀별 표지\데자뷰-책-표지.jpg" alt="Book 1">
+                <p>Dejavu</p>
+            </a>
+        </div>
+
         <!-- Repeat the above structure for the remaining books -->
         <!-- Adjust image paths and book titles accordingly -->
     </div>
