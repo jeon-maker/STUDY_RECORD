@@ -30,8 +30,8 @@
             justify-content: center;
             position: relative;
             padding: 20px;
-            background-color: rgba(0, 0, 0, 0.5);
-            color: white;
+            background-color: white; /* Changed background color to white */
+            color: black; /* Changed text color to black */
         }
         .sidebar img {
             position: absolute;
@@ -47,13 +47,14 @@
         }
         .nav-links a {
             text-decoration: none;
-            color: white;
-            margin: 10px 0;
-            font-size: 1.2em;
-            transition: color 0.3s;
+            color: black; /* Changed link color to black */
+            margin: 20px 0; /* Increased vertical margin */
+            font-size: 2em; /* Increased font size */
+            transition: color 0.3s, text-decoration 0.3s;
         }
         .nav-links a:hover {
-            color: #ddd;
+            color: #555; /* Changed hover color */
+            text-decoration: underline; /* Added underline effect on hover */
         }
         .main-content {
             width: 66.66%;
@@ -71,8 +72,8 @@
             <div class="sidebar">
                 <img src="kuad 이미지.png" alt="Logo">
                 <div class="nav-links">
-                    <a href="PROJECTS.html">PROJECTS</a>
-                    <a href="LOOKBOOK.html">LOOKBOOK</a>
+                    <a href=".\PROJECTS\PROJECTS.html">PROJECTS</a>
+                    <a href=".\LOOKBOOK\LOOKBOOK.html">LOOKBOOK</a>
                     <a href="RUNWAY.html">RUNWAY</a>
                     <a href="SHOW_INFO.html">SHOW INFO</a>
                     <a href="BEHIND.html">BEHIND</a>

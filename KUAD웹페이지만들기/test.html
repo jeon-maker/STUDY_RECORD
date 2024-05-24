@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KUAD FASHION SHOW 2024 PROTOTYPE</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+            background: url('뒷배경.jpeg') no-repeat center center fixed;
+            background-size: cover;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: rgba(255, 255, 255, 0.8); /* Add background color to header for better readability */
+        }
+        .nav-links {
+            display: flex;
+            justify-content: center;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: black; /* Changed to black for better contrast */
+            margin: 0 20px; /* Increase margin for wider spacing */
+            font-size: 1.2em; /* Reduced font size */
+            transition: color 0.3s, text-decoration 0.3s;
+        }
+        .nav-links a:hover {
+            color: #555; /* Changed hover color */
+            text-decoration: underline; /* Added underline effect on hover */
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 20px;
+            height: calc(100vh - 40px); /* Subtract the height of the header */
+        }
+        .logo {
+            width: 100px;
+        }
+        .book {
+            width: calc(33.33% - 40px); /* Adjust the width and spacing */
+            margin: 10px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        .book:hover {
+            transform: scale(0.95);
+        }
+        .book img {
+            width: 100%;
+            max-width: 150px; /* Adjust the maximum width */
+            border-radius: 5px;
+        }
+        .book p {
+            margin-top: 10px;
+            font-size: 18px; /* Increase font size */
+            color: #333; /* Change font color */
+            font-style: italic; /* Apply italic style */
+            font-weight: bold; /* Apply bold style */
+        }
+        .banner-link {
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="index.html" class="logo-link">
+            <img src="kuad 이미지.png" alt="KUAD Logo" class="logo">
+        </a>
+        <div class="nav-links">
+            <a href="PROJECTS.html" class="banner-link">PROJECTS</a>
+            <a href="LOOKBOOK.html" class="banner-link">LOOKBOOK</a>
+            <a href="RUNWAY.html" class="banner-link">RUNWAY</a>
+            <a href="SHOW_INFO.html" class="banner-link">SHOW INFO</a>
+            <a href="BEHIND.html" class="banner-link">BEHIND</a>
+        </div>
+    </div>
+    <div class="container">
+        <div class="book">
+            <a href="book1.html">
+                <img src="팀포스터.jpg" alt="Book 1">
+                <p>Book 1 Title</p>
+            </a>
+        </div>
+        <div class="book">
+            <a href="book2.html">
+                <img src="팀포스터.jpg" alt="Book 2">
+                <p>Book 2 Title</p>
+            </a>
+        </div>
+        <div class="book">
+            <a href="book1.html">
+                <img src="팀포스터.jpg" alt="Book 1">
+                <p>Book 1 Title</p>
+            </a>
+        </div>
+        <div class="book">
+            <a href="book1.html">
+                <img src="팀포스터.jpg" alt="Book 1">
+                <p>Book 1 Title</p>
+            </a>
+        </div>
+        <div class="book">
+            <a href="book1.html">
+                <img src="팀포스터.jpg" alt="Book 1">
+                <p>Book 1 Title</p>
+            </a>
+        </div>
+        <div class="book">
+            <a href="book1.html">
+                <img src="팀포스터.jpg" alt="Book 1">
+                <p>Book 1 Title</p>
+            </a>
+        </div>
+
+        <!-- Repeat the above structure for the remaining books -->
+        <!-- Adjust image paths and book titles accordingly -->
+    </div>
+</body>
+</html>
