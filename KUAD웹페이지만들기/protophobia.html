@@ -193,43 +193,38 @@
     </div>
     <br>
     <br>
-    <div class="video-container" onclick="playVideo()" onmouseover="showPlayButton()" onmouseout="hidePlayButton()">
-        <img id="thumbnailImage" src="protophobia-.jpg" alt="Video Thumbnail" style="cursor: pointer;">
+    <div class="video-container" onclick="playVideo()" style="position: relative;">
+        <img id="thumbnailImage" src="protophobia-.jpg" alt="Video Thumbnail" style="cursor: pointer; width: 100%;">
         <video id="videoPlayer" controls style="display: none;">
             <source src="1 - [protophobia].mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
-        <button id="playButton" style="display: none; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: none; border: none;">
-            <img src="play_button.png" alt="Play Button" style="width: 50px; height: 50px;">
+        <button id="playButton" onclick="hidePlayButton()" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: none; border: none;">
+            <img src="button.png" alt="Play Button" style="width: 50px; height: 50px;">
         </button>
     </div>
     
     <script>
+        var video = document.getElementById('videoPlayer');
+        var playButton = document.getElementById('playButton');
+    
         function playVideo() {
             var thumbnail = document.getElementById('thumbnailImage');
-            var video = document.getElementById('videoPlayer');
             thumbnail.style.display = 'none';
             video.style.display = 'block';
             video.play();
-        }
-    
-        function showPlayButton() {
-            var playButton = document.getElementById('playButton');
-            playButton.style.display = 'block';
-        }
-    
-        function hidePlayButton() {
-            var playButton = document.getElementById('playButton');
-            playButton.style.display = 'none';
+            playButton.style.display = 'none'; // 동영상 재생시 버튼 숨김
         }
     </script>
+    
+    
     
 
     <br><br>
     <br>
     <br>
     <br>
-    <p style="margin-left: 220px;"> <b>TEAM MEMBERS</b></p>
+    <p style="margin-left: 240px;"> <b>TEAM MEMBERS</b></p>
     <div class="team-container">
         <div class="team-member">
             <img src="./members/최준우.jpg" alt="Team Leader">
